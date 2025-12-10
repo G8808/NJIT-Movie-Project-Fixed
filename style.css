@@ -5,8 +5,11 @@ body {
     padding: 0;
     width: 100%;
     overflow: auto;
-    background-image: url(img/geometry.jpg);
+    background-image: url(elegant-theater-curtain-stockcake.webp);
     animation: slideBackground 120s linear infinite;
+background-attachment: fixed;
+    background-size: 728px 100vh;
+
 }
 
 /* Supremely slow background animation */
@@ -22,10 +25,18 @@ body {
 /* This stylizes the header area */
 .header {
     padding: 15px;
+    text-align: center;
 }
 .header h1 {
-    display: inline-block;
-    color: red;
+    display: block;
+    color: white;
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 /* This stylizes the main page area */
@@ -159,4 +170,3 @@ body {
         transform: translateX(-3px);
     }
 }
-

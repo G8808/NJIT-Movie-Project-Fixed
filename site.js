@@ -37,6 +37,7 @@ const vue_app = Vue.createApp({
       title: 'IMDB Giancarlos Top 8 Movies',
       owner: ' Giancarlo',
             movies: [],
+            favorites: {},
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
          
       }
@@ -78,6 +79,16 @@ const vue_app = Vue.createApp({
            },
            getPosterIndexText: function(movie) {
             return `${movie.posterindex + 1} of ${movie.posters.length}`;
+           },
+           toggleFavorite: function(title) {
+            if (this.favorites[title]) {
+              delete this.favorites[title];
+            } else {
+              this.favorites[title] = true;
+            }
+           },
+           isFavorite: function(title) {
+            return this.favorites[title] || false;
            }
 
            
